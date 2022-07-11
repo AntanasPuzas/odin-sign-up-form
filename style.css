@@ -160,3 +160,11 @@ form input:valid+span:before {
 .create-account button:hover {
     background-color: #592826;
 }
+
+.error {
+    border: solid rgba(217, 2, 2, 0.7) 1.5px;
+}
+
+.passwords-dont-match {
+    color: rgba(217, 2, 2, 0.7);
+}

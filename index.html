@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Sign-up Form</title>
 </head>
 
@@ -13,7 +14,7 @@
     <div class="image-sidebar">
         <div class="page-title">
             <img alt="site logo" src="logo.svg"></img>
-            <h1>Bungo</h1>
+            <h1 id="bungo">Bungo</h1>
         </div>
         <p>Photo by <a href="https://unsplash.com/@attiepatatie" target="_blank">Altin Ferreira</a> of
             <a href="https://unsplash.com/" target="_blank">Unsplash</a>
@@ -53,7 +54,7 @@
                 <div class="form-row">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" required placeholder="*******">
-                    <span></span>
+                    <span id="password-span"></span>
                 </div>
                 <div class="form-row">
                     <label for="confirm-password">Confirm password</label>
@@ -63,7 +64,7 @@
             </div>
         </form>
         <div class="create-account">
-            <button form="form">Create Account</button>
+            <button form="form" id="submit-button">Create Account</button>
             <p>Already have an account? <a href="#">Log in</a></p>
         </div>
     </div>
