@@ -27,7 +27,7 @@ a {
     justify-content: space-between;
     align-items: center;
     background-image: url("altin-ferreira-WqikGvMf_hk-unsplash.jpg");
-    background-size: 200% auto;
+    background-size: 200% 100%;
     background-repeat: no-repeat;
     background-position: -150px 0;
     width: 700px;
@@ -69,25 +69,35 @@ header h2 {
 form {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     background-color: rgb(68, 68, 68);
     padding: 20px 0 40px 0;
     margin-bottom: 40px;
 }
 
-.form-title,
-.form-row {
+form>h1,
+.form-control-container {
     padding-left: 40px;
 }
 
+form>h1 {
+    margin-bottom: 20px;
+}
+
+.form-control-container {
+    display: flex;
+    max-width: 600px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
 .form-row {
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-row label {
     text-transform: uppercase;
-    position: absolute;
-    bottom: 30px;
     font-family: 'Roboto Mono', monospace;
     font-size: 0.9rem;
     opacity: 0.95;
@@ -97,7 +107,7 @@ form input {
     box-sizing: border-box;
     width: 200px;
     height: 25px;
-    margin-right: 40px;
+    margin: 10px 40px 5px 0;
     padding: 3px 4px;
     font-size: 1.1rem;
     border: none;
@@ -106,6 +116,15 @@ form input {
 
 form input:focus {
     border: solid black 1.5px;
+}
+
+form input:not(:focus):not(:placeholder-shown):invalid {
+    border: solid red 1.5px;
+}
+
+form input:required+span:before {
+    content: "* Required";
+    color: rgba(217, 2, 2, 0.728)
 }
 
 .create-account {
