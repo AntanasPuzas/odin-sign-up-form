@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,53 @@
     <link rel="stylesheet" href="style.css">
     <title>Sign-up Form</title>
 </head>
+
 <body>
-    
+    <div class="image-sidebar">
+        <div class="page-title">
+            <img alt="site logo" src="logo.svg"></img>
+            <h1>Bungo</h1>
+        </div>
+        <p>Photo by <a href="https://unsplash.com/@attiepatatie" target="_blank">Altin Ferreira</a> of
+            <a href="https://unsplash.com/" target="_blank">Unsplash</a>
+        </p>
+    </div>
+    <div class="form-container">
+        <header>
+            <h2>This is not a real online service! You know you need something like this in your life to help you
+                realize
+                your deepest dreams. sign up <em>now</em> to get started.</h2>
+            <br>
+            <h2>You <em>know</em> you want to.</h2>
+        </header>
+        <form action="" id="form">
+            <div class="form-title">
+                <h1>Let's do this!</h1>
+            </div>
+            <div class="form-row">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required>
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone-number">
+            </div>
+            <div class="form-row">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <label for="confirm-password">Confirm password</label>
+                <input type="password" id="confirm-password" name="password" required>
+            </div>
+        </form>
+        <div class="create-account">
+            <button form="form">Create Account</button>
+            <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+    </div>
 </body>
+
 </html>
