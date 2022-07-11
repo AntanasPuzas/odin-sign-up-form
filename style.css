@@ -88,7 +88,7 @@ form>h1 {
     display: flex;
     max-width: 600px;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 20px;
 }
 
 .form-row {
@@ -118,13 +118,27 @@ form input:focus {
     border: solid black 1.5px;
 }
 
+form span {
+    font-size: 1rem;
+    height: 1rem;
+}
+
 form input:not(:focus):not(:placeholder-shown):invalid {
-    border: solid red 1.5px;
+    border: solid rgba(217, 2, 2, 0.7) 1.5px;
 }
 
 form input:required+span:before {
     content: "* Required";
-    color: rgba(217, 2, 2, 0.728)
+    color: rgba(217, 2, 2, 0.7)
+}
+
+form input:not(:focus):not(:placeholder-shown):invalid+span:before {
+    content: "* Invalid format";
+    color: rgba(217, 2, 2, 0.7)
+}
+
+form input:valid+span:before {
+    content: "";
 }
 
 .create-account {
